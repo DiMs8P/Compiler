@@ -9,8 +9,8 @@ using namespace std;
 
 int main(int argc, char* argv[])
 {
-    StringsReader reader1(R"(D:\RiderProjects\Compiler\Compiler\Compiler\InputData\razdelitelb.txt)");
-    CharsReader reader2(R"(D:\RiderProjects\Compiler\Compiler\Compiler\InputData\razdelitelb.txt)");
+    StringsReader reader1(R"(InputData\razdelitelb.txt)");
+    CharsReader reader2(R"(InputData\razdelitelb.txt)");
     
     PersistentTable<char> Table;
     VolatileTable<string> Table2;
