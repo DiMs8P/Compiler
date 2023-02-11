@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\DataReader">
+      <UniqueIdentifier>{b1786f12-c766-430b-9004-ff46dbb4dc47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DataTable">
+      <UniqueIdentifier>{bbef8282-456d-416b-9b06-3a86c6cc723f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\InputData">
+      <UniqueIdentifier>{b73c33ed-4ea8-4016-8ed3-3dcd31559ddd}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DataReader\CharsReader.cpp">
+      <Filter>Source Files\DataReader</Filter>
+    </ClCompile>
+    <ClCompile Include="DataReader\FileReader.cpp">
+      <Filter>Source Files\DataReader</Filter>
+    </ClCompile>
+    <ClCompile Include="DataReader\StringsReader.cpp">
+      <Filter>Source Files\DataReader</Filter>
+    </ClCompile>
+    <ClCompile Include="DataTable\BaseDataTable.cpp">
+      <Filter>Source Files\DataTable</Filter>
+    </ClCompile>
+    <ClCompile Include="DataTable\PersistentTable.cpp">
+      <Filter>Source Files\DataTable</Filter>
+    </ClCompile>
+    <ClCompile Include="DataTable\VolatileTable.cpp">
+      <Filter>Source Files\DataTable</Filter>
+    </ClCompile>
+    <ClCompile Include="Compiler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DataReader\CharsReader.h">
+      <Filter>Source Files\DataReader</Filter>
+    </ClInclude>
+    <ClInclude Include="DataReader\FileReader.h">
+      <Filter>Source Files\DataReader</Filter>
+    </ClInclude>
+    <ClInclude Include="DataReader\IDataReader.h">
+      <Filter>Source Files\DataReader</Filter>
+    </ClInclude>
+    <ClInclude Include="DataReader\StringsReader.h">
+      <Filter>Source Files\DataReader</Filter>
+    </ClInclude>
+    <ClInclude Include="DataTable\BaseDataTable.h">
+      <Filter>Source Files\DataTable</Filter>
+    </ClInclude>
+    <ClInclude Include="DataTable\PersistentTable.h">
+      <Filter>Source Files\DataTable</Filter>
+    </ClInclude>
+    <ClInclude Include="DataTable\VolatileTable.h">
+      <Filter>Source Files\DataTable</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="InputData\inputprog.txt">
+      <Filter>Source Files\InputData</Filter>
+    </Text>
+    <Text Include="InputData\razdelitelb.txt">
+      <Filter>Source Files\InputData</Filter>
+    </Text>
+    <Text Include="InputData\word.txt">
+      <Filter>Source Files\InputData</Filter>
+    </Text>
+    <Text Include="InputData\znak.txt">
+      <Filter>Source Files\InputData</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
