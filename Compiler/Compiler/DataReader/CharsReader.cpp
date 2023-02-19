@@ -1,22 +1,25 @@
 ﻿#include "CharsReader.h"
 
-void CharsReader::Read(unordered_set<char>& outputData)
+vector<char> CharsReader::Read()
 {
-    ReadChars(outputData);
+	return ReadChars();
 }
 
-void CharsReader::ReadChars(unordered_set<char>& outputData) const
+vector<char> CharsReader::ReadChars() const
 {
-    ifstream fin(_filePath);
-    if (!fin.is_open())
-    {
-        throw exception("Invalid file path!");
-    }
-    
-    char symbol;
-    while (fin >> symbol)
-    {
-        outputData.insert(symbol);
-    }
-    fin.close();
+	ifstream fin(_filePath);
+	if (!fin.is_open())
+	{
+		throw exception("Invalid file path!");
+	}
+
+	vector<char> output;
+	char symbol;
+	while (fin >> symbol)
+	{
+		output.push_back(symbol);
+	}
+	fin.close();
+
+	return output;
 }

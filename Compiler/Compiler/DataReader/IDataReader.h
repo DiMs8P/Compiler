@@ -7,5 +7,5 @@ template<typename DataType>
 class IDataReader
 {
 public:
-    virtual void Read(std::unordered_set<DataType>& outputData) = 0;
+    virtual std::vector<DataType> Read() = 0;
 };

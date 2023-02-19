@@ -5,8 +5,8 @@ class StringsReader : public FileReader<string>
 {
 public:
     StringsReader(const string& filePath) : FileReader(filePath){}
-    void Read(unordered_set<string>& outputData) override;
+    vector<string> Read() override;
 
 protected:
-    void ReadStrings(unordered_set<string>& outputData) const;
+    vector<string> ReadStrings() const;
 };

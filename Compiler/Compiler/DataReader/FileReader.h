@@ -10,7 +10,7 @@ class FileReader : public IDataReader<DataType>
 public:
     explicit FileReader(const string& filePath);
     void SetFilePath(const string& filePath);
-    virtual void Read(unordered_set<DataType>& outputData) = 0;
+    virtual vector<DataType> Read() = 0;
 
 protected:
     string _filePath;

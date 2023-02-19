@@ -11,21 +11,8 @@ public:
     virtual ~BaseDataTable() = default;
     BaseDataTable() = default;
 
-    virtual void Load(IDataReader<DataType>& reader)
-    {
-        reader.Read(_data);
-    }
-    virtual bool Find(DataType Elem);
+    virtual void Load(IDataReader<DataType>& reader) = 0;
+    virtual bool Find(const DataType& Elem) = 0;
 protected:
-    std::unordered_set<DataType> _data;
+    std::unordered_multiset<DataType> _data;
 };
-
-template <typename DataType>
-bool BaseDataTable<DataType>::Find(DataType Elem)
-{
-    if (_data.find(Elem) == _data.end())
-    {
-        return false;
-    }
-    return true;
-}

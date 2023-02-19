@@ -1,11 +1,11 @@
 ﻿#include "StringsReader.h"
 
-void StringsReader::Read(unordered_set<string>& outputData)
+vector<string> StringsReader::Read()
 {
-    ReadStrings(outputData);
+    return ReadStrings();
 }
 
-void StringsReader::ReadStrings(unordered_set<string>& outputData) const
+vector<string> StringsReader::ReadStrings() const
 {
     ifstream fin(_filePath);
     if (!fin.is_open())
@@ -13,10 +13,13 @@ void StringsReader::ReadStrings(unordered_set<string>& outputData) const
         throw exception("Invalid file path!");
     }
 
+    vector<string> output;
     string str;
     while (getline(fin, str))
     {
-        outputData.insert(str);
+        output.push_back(str);
     }
     fin.close();
+
+    return output;
 }

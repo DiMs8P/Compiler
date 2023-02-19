@@ -1,9 +1,7 @@
 ﻿  Compiler.cpp
   CharsReader.cpp
-  FileReader.cpp
-  StringsReader.cpp
   BaseDataTable.cpp
   PersistentTable.cpp
   VolatileTable.cpp
-  Создание кода...
-  Compiler.vcxproj -> C:\Users\pinel\OneDrive\Documents\GitHub\Compiler\Compiler\x64\Debug\Compiler.exe
+  Generating Code...
+  Compiler.vcxproj -> D:\RiderProjects\Compiler\Compiler\x64\Debug\Compiler.exe

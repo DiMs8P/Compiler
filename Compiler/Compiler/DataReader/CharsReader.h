@@ -5,8 +5,8 @@ class CharsReader : public FileReader<char>
 {
 public:
     CharsReader(const string& filePath) : FileReader(filePath){}
-    void Read(unordered_set<char>& outputData) override;
+    vector<char> Read() override;
 
 protected:
-    void ReadChars(unordered_set<char>& outputData) const;
+    vector<char> ReadChars() const;
 };

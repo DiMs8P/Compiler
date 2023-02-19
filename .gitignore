@@ -396,3 +396,14 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+Compiler/Compiler/x64/Debug/Compiler.exe.recipe
+Compiler/Compiler/x64/Debug/Compiler.ilk
+Compiler/Compiler/x64/Debug/Compiler.log
+Compiler/Compiler/x64/Debug/Compiler.tlog/Compiler.lastbuildstate
+Compiler/Compiler/x64/Debug/Compiler.tlog/link.read.1.tlog
+Compiler/Compiler/x64/Debug/vc143.idb
+Compiler/Compiler/x64/Debug/vc143.pdb
+Compiler/x64/Debug/Compiler.pdb
+*.tlog
+*.idb

@@ -15,7 +15,6 @@ int main(int argc, char* argv[])
     PersistentTable<char> Table;
     VolatileTable<string> Table2;
     Table.Load(reader2);
-    
     if (Table.Find('}'))
     {
         cout << __FUNCTION__;
@@ -26,6 +25,5 @@ int main(int argc, char* argv[])
     }
 
     Table2.Add("asd");
-    _getchar_nolock();
     return 0;
 }
