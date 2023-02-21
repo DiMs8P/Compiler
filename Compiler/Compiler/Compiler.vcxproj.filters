@@ -22,6 +22,15 @@
     <Filter Include="Source Files\InputData">
       <UniqueIdentifier>{b73c33ed-4ea8-4016-8ed3-3dcd31559ddd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Compiler">
+      <UniqueIdentifier>{7fcbca98-fb30-48da-9c94-8a07c8486d23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Compiler\LexicalAnalyzer">
+      <UniqueIdentifier>{4e43a8c3-fdfd-4c9c-89e9-decaff1d6f46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Compiler\SyntacticalAnalyzer">
+      <UniqueIdentifier>{75b06d55-973a-4d49-bd9a-8572d4bf0919}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DataReader\CharsReader.cpp">
@@ -42,8 +51,17 @@
     <ClCompile Include="DataTable\VolatileTable.cpp">
       <Filter>Source Files\DataTable</Filter>
     </ClCompile>
-    <ClCompile Include="Compiler.cpp">
+    <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Compiler.cpp">
+      <Filter>Source Files\Compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="LexicalAnalyzer.cpp">
+      <Filter>Source Files\Compiler\LexicalAnalyzer</Filter>
+    </ClCompile>
+    <ClCompile Include="SyntacticalAnalyzer.cpp">
+      <Filter>Source Files\Compiler\SyntacticalAnalyzer</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -67,6 +85,18 @@
     </ClInclude>
     <ClInclude Include="DataTable\VolatileTable.h">
       <Filter>Source Files\DataTable</Filter>
+    </ClInclude>
+    <ClInclude Include="Compiler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LexicalAnalyzer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SyntacticalAnalyzer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Token.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

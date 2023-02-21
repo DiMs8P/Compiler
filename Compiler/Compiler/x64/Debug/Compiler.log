@@ -1,7 +1,98 @@
-﻿  Compiler.cpp
-  CharsReader.cpp
-  BaseDataTable.cpp
-  PersistentTable.cpp
+﻿  Main.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32213\include\unordered_set(49,99): error C2280: 'std::_Uhash_compare<_Kty,_Hasher,_Keyeq>::_Uhash_compare(const std::_Uhash_compare<_Kty,_Hasher,_Keyeq> &)': attempting to reference a deleted function
+          with
+          [
+              _Kty=OneToken,
+              _Hasher=std::hash<OneToken>,
+              _Keyeq=std::equal_to<OneToken>
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32213\include\xhash(175,1): message : compiler has generated 'std::_Uhash_compare<_Kty,_Hasher,_Keyeq>::_Uhash_compare' here
+          with
+          [
+              _Kty=OneToken,
+              _Hasher=std::hash<OneToken>,
+              _Keyeq=std::equal_to<OneToken>
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32213\include\xhash(175,1): message : 'std::_Uhash_compare<_Kty,_Hasher,_Keyeq>::_Uhash_compare(const std::_Uhash_compare<_Kty,_Hasher,_Keyeq> &)': function was implicitly deleted because a data member invokes a deleted or inaccessible function 'std::_Compressed_pair<_Hasher,std::_Compressed_pair<_Keyeq,float,true>,true>::_Compressed_pair(const std::_Compressed_pair<_Hasher,std::_Compressed_pair<_Keyeq,float,true>,true> &)'
+          with
+          [
+              _Kty=OneToken,
+              _Hasher=std::hash<OneToken>,
+              _Keyeq=std::equal_to<OneToken>
+          ]
+          and
+          [
+              _Hasher=std::hash<OneToken>,
+              _Keyeq=std::equal_to<OneToken>
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32213\include\xmemory(1389,1): message : 'std::_Compressed_pair<_Hasher,std::_Compressed_pair<_Keyeq,float,true>,true>::_Compressed_pair(const std::_Compressed_pair<_Hasher,std::_Compressed_pair<_Keyeq,float,true>,true> &)': function was implicitly deleted because a base class invokes a deleted or inaccessible function 'std::hash<DataType>::hash(const std::hash<DataType> &)'
+          with
+          [
+              _Hasher=std::hash<OneToken>,
+              _Keyeq=std::equal_to<OneToken>
+          ]
+          and
+          [
+              DataType=OneToken
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32213\include\type_traits(2189,1): message : 'std::hash<DataType>::hash(const std::hash<DataType> &)': function was implicitly deleted because a base class invokes a deleted or inaccessible function 'std::_Conditionally_enabled_hash<_Kty,false>::_Conditionally_enabled_hash(const std::_Conditionally_enabled_hash<_Kty,false> &)'
+          with
+          [
+              DataType=OneToken
+          ]
+          and
+          [
+              _Kty=OneToken
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32213\include\type_traits(2176,5): message : 'std::_Conditionally_enabled_hash<_Kty,false>::_Conditionally_enabled_hash(const std::_Conditionally_enabled_hash<_Kty,false> &)': function was explicitly deleted
+          with
+          [
+              _Kty=OneToken
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32213\include\unordered_set(49,1): message : while compiling class template member function 'std::_Uset_traits<_Kty,std::_Uhash_compare<_Kty,_Hasher,_Keyeq>,_Alloc,true>::_Uset_traits(const _Tr &) noexcept(false)'
+          with
+          [
+              _Kty=OneToken,
+              _Hasher=std::hash<OneToken>,
+              _Keyeq=std::equal_to<OneToken>,
+              _Alloc=std::allocator<OneToken>,
+              _Tr=std::_Uhash_compare<OneToken,std::hash<OneToken>,std::equal_to<OneToken>>
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32213\include\xhash(375,21): message : see reference to function template instantiation 'std::_Uset_traits<_Kty,std::_Uhash_compare<_Kty,_Hasher,_Keyeq>,_Alloc,true>::_Uset_traits(const _Tr &) noexcept(false)' being compiled
+          with
+          [
+              _Kty=OneToken,
+              _Hasher=std::hash<OneToken>,
+              _Keyeq=std::equal_to<OneToken>,
+              _Alloc=std::allocator<OneToken>,
+              _Tr=std::_Uhash_compare<OneToken,std::hash<OneToken>,std::equal_to<OneToken>>
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32213\include\xhash(334,1): message : see reference to class template instantiation 'std::_Uset_traits<_Kty,std::_Uhash_compare<_Kty,_Hasher,_Keyeq>,_Alloc,true>' being compiled
+          with
+          [
+              _Kty=OneToken,
+              _Hasher=std::hash<OneToken>,
+              _Keyeq=std::equal_to<OneToken>,
+              _Alloc=std::allocator<OneToken>
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32213\include\unordered_set(409): message : see reference to class template instantiation 'std::_Hash<std::_Uset_traits<_Kty,std::_Uhash_compare<_Kty,_Hasher,_Keyeq>,_Alloc,true>>' being compiled
+          with
+          [
+              _Kty=OneToken,
+              _Hasher=std::hash<OneToken>,
+              _Keyeq=std::equal_to<OneToken>,
+              _Alloc=std::allocator<OneToken>
+          ]
+D:\RiderProjects\Compiler\Compiler\Compiler\DataTable\BaseDataTable.h(14,1): message : see reference to class template instantiation 'std::unordered_multiset<DataType,std::hash<DataType>,std::equal_to<DataType>,std::allocator<DataType>>' being compiled
+          with
+          [
+              DataType=OneToken
+          ]
+D:\RiderProjects\Compiler\Compiler\Compiler\DataTable\VolatileTable.h(7): message : see reference to class template instantiation 'BaseDataTable<DataType>' being compiled
+          with
+          [
+              DataType=OneToken
+          ]
+D:\RiderProjects\Compiler\Compiler\Compiler\Main.cpp(16,26): message : see reference to class template instantiation 'VolatileTable<OneToken>' being compiled
   VolatileTable.cpp
   Generating Code...
-  Compiler.vcxproj -> D:\RiderProjects\Compiler\Compiler\x64\Debug\Compiler.exe

@@ -15,7 +15,7 @@ vector<char> CharsReader::ReadChars() const
 
 	vector<char> output;
 	char symbol;
-	while (fin >> symbol)
+	while (fin >> noskipws >> symbol)
 	{
 		output.push_back(symbol);
 	}
