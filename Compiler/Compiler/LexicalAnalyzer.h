@@ -1,5 +1,5 @@
 #pragma once
-#include <map>
+#include "Token.h"
 #include <string>
 #include "DataTable/PersistentTable.h"
 
@@ -11,10 +11,10 @@ class LexicalAnalyzer
 public:
 	friend class Compiler;
 
-protected:
-	void Init();
-	void Analyze(vector<char> program);
+	LexicalAnalyzer();
+	void Analyze(const vector<char>& program);
 
+protected:
 	vector<PersistentTable<string>> StringTables;
 };
 

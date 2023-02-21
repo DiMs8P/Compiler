@@ -2,7 +2,7 @@
 #include "DataReader/CharsReader.h"
 #include "DataReader/StringsReader.h"
 
-void LexicalAnalyzer::Init()
+LexicalAnalyzer::LexicalAnalyzer()
 {
 	StringsReader readerString(R"(InputData\word.txt)");
 	PersistentTable<string> StringTable;
@@ -18,9 +18,9 @@ void LexicalAnalyzer::Init()
 	StringTables.push_back(StringTable);
 }
 
-void LexicalAnalyzer::Analyze(vector<char> program)
+void LexicalAnalyzer::Analyze(const vector<char>& program)
 {
-
+	
 }
 
 

@@ -1,11 +1,8 @@
 #pragma once
 #include <string>
 #include <vector>
-
 #include "LexicalAnalyzer.h"
 #include "SyntacticalAnalyzer.h"
-
-using namespace std;
 
 class Compiler
 {
