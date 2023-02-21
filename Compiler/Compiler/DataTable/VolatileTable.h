@@ -43,6 +43,7 @@ void VolatileTable<DataType>::Add(const DataType& elem)
 template <class DataType>
 void VolatileTable<DataType>::Load(IDataReader<DataType>& reader)
 {
+    this->_data.clear();
     for (const auto& value : reader.Read()) {
         this->_data.insert(value);
     }

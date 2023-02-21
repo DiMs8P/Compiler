@@ -23,6 +23,7 @@ bool PersistentTable<DataType>::Find(const DataType& elem)
 template <class DataType>
 void PersistentTable<DataType>::Load(IDataReader<DataType>& reader)
 {
+    this->_data.clear();
     for (const auto& value : reader.Read()) {
 
         // Insert each element

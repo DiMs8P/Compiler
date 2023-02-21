@@ -1,4 +1,5 @@
 ﻿  Compiler.cpp
+  PersistentTable.cpp
   VolatileTable.cpp
   LexicalAnalyzer.cpp
   Main.cpp
