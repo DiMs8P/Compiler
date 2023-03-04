@@ -63,6 +63,9 @@
     <ClCompile Include="SyntacticalAnalyzer.cpp">
       <Filter>Source Files\Compiler\SyntacticalAnalyzer</Filter>
     </ClCompile>
+    <ClCompile Include="IndentificatorTable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DataReader\CharsReader.h">
@@ -96,6 +99,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Token.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Identificator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Constant.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IndentificatorTable.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

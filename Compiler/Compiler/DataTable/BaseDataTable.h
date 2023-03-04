@@ -6,8 +6,8 @@ template<typename DataType>
 class BaseDataTable
 {
 public:
-    virtual void Load(IDataReader<DataType>& reader) = 0;
-    virtual bool Find(const DataType& Elem) = 0;
+	virtual void Load(IDataReader<DataType>& reader) = 0;
+	virtual int Find(const DataType& Elem) = 0;
 protected:
-    std::unordered_multiset<DataType> _data;
+	std::unordered_multiset<DataType> _data;
 };

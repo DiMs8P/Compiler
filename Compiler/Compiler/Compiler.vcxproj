@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Compiler.cpp" />
+    <ClCompile Include="IndentificatorTable.cpp" />
     <ClCompile Include="LexicalAnalyzer.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="DataReader\CharsReader.cpp" />
@@ -32,6 +33,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Compiler.h" />
+    <ClInclude Include="Constant.h" />
+    <ClInclude Include="IndentificatorTable.h" />
     <ClInclude Include="DataReader\CharsReader.h" />
     <ClInclude Include="DataReader\FileReader.h" />
     <ClInclude Include="DataReader\IDataReader.h" />
@@ -39,6 +42,7 @@
     <ClInclude Include="DataTable\BaseDataTable.h" />
     <ClInclude Include="DataTable\PersistentTable.h" />
     <ClInclude Include="DataTable\VolatileTable.h" />
+    <ClInclude Include="Identificator.h" />
     <ClInclude Include="LexicalAnalyzer.h" />
     <ClInclude Include="SyntacticalAnalyzer.h" />
     <ClInclude Include="Token.h" />
