@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Compiler.cpp" />
+    <ClCompile Include="ExceptionManager\ExceptionManager.cpp" />
     <ClCompile Include="IndentificatorTable.cpp" />
     <ClCompile Include="LexicalAnalyzer.cpp" />
     <ClCompile Include="Main.cpp" />
@@ -34,6 +35,7 @@
   <ItemGroup>
     <ClInclude Include="Compiler.h" />
     <ClInclude Include="Constant.h" />
+    <ClInclude Include="ExceptionManager\ExceptionManager.h" />
     <ClInclude Include="IndentificatorTable.h" />
     <ClInclude Include="DataReader\CharsReader.h" />
     <ClInclude Include="DataReader\FileReader.h" />
