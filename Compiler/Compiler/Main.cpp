@@ -7,8 +7,8 @@ using namespace std;
 
 int main(int argc, char* argv[])
 {
-		Compiler compiler(R"(InputData\inputprog.txt)");
-		compiler.Compile();
+	Compiler compiler(R"(InputData\inputprog.txt)");
+	compiler.Compile();
 
-		return 0;
+	return 0;
 }

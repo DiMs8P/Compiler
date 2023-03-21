@@ -407,3 +407,15 @@ Compiler/Compiler/x64/Debug/vc143.pdb
 Compiler/x64/Debug/Compiler.pdb
 *.tlog
 *.idb
+Compiler/x64/Debug/Compiler.pdb
+Compiler/Compiler/x64/Debug/vc143.pdb
+Compiler/Compiler/x64/Debug/vc143.idb
+Compiler/Compiler/x64/Debug/Compiler.tlog/link.write.1.tlog
+Compiler/Compiler/x64/Debug/Compiler.tlog/link.read.1.tlog
+Compiler/Compiler/x64/Debug/Compiler.tlog/link.command.1.tlog
+Compiler/Compiler/x64/Debug/Compiler.tlog/Compiler.lastbuildstate
+Compiler/Compiler/x64/Debug/Compiler.tlog/CL.write.1.tlog
+Compiler/Compiler/x64/Debug/Compiler.tlog/CL.read.1.tlog
+Compiler/Compiler/x64/Debug/Compiler.tlog/CL.command.1.tlog
+Compiler/Compiler/x64/Debug/Compiler.ilk
+Compiler/Compiler/x64/Debug/Compiler.exe.recipe
