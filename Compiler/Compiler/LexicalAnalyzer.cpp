@@ -129,6 +129,7 @@ void LexicalAnalyzer::Analyze(const vector<char>& program)
 				}
 				else
 				{
+					if (StringTables[2].Find(buffer) != -1)
 					fout << "(3, " << StringTables[2].Find(buffer) << " ) ";
 					//TokenTable.Add({ 3, StringTables[2].Find(buffer) });
 				}
