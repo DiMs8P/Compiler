@@ -2,9 +2,11 @@
 #include "Token.h"
 #include <string>
 
+
 #include "Constant.h"
 #include "Identificator.h"
 #include "DataTable/PersistentTable.h"
+#include "DataTable/VolatileTable.h"
 
 struct Token;
 using namespace std;
@@ -41,5 +43,8 @@ public:
 
 protected:
 	vector<PersistentTable<string>> StringTables;
+	VolatileTable <string> ConstantTable;
+	VolatileTable <Token> TokenTable;
+	VolatileTable <string> IdTable;
 };
 
