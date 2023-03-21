@@ -18,13 +18,6 @@ LexicalAnalyzer::LexicalAnalyzer()
 	readerString.SetFilePath(R"(InputData\znak.txt)");
 	StringTable.Load(readerString);
 	StringTables.push_back(StringTable);
-
-	IndentificatorTable StringTable1;
-	StringTable1.Add({ "asd",1,1 });
-	StringTable1.Add({ "asd",1,1 });
-	StringTable1.ChangeType(1, 10);
-	StringTable1.ChangeValue(1, 11);
-	StringTable1.Add({ "asd",1,1 });
 }
 
 void LexicalAnalyzer::Analyze(const vector<char>& program)
