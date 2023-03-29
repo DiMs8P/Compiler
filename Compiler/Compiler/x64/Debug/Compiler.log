@@ -1,27 +1,27 @@
 ﻿  LexicalAnalyzer.cpp
-C:\Users\pinel\OneDrive\Documents\GitHub\Compiler\Compiler\Compiler\DataTable\PersistentTable.h(24,22): warning C4244: return: преобразование "__int64" в "int", возможна потеря данных
-C:\Users\pinel\OneDrive\Documents\GitHub\Compiler\Compiler\Compiler\DataTable\PersistentTable.h(18,1): message : во время компиляции функции-члена класс шаблон "int PersistentTable<std::string>::Find(const DataType &)"
+C:\Users\dotad\OneDrive\Рабочий стол\New folder (3)\Compiler\Compiler\Compiler\DataTable\PersistentTable.h(24,22): warning C4244: 'return': conversion from '__int64' to 'int', possible loss of data
+C:\Users\dotad\OneDrive\Рабочий стол\New folder (3)\Compiler\Compiler\Compiler\DataTable\PersistentTable.h(18,1): message : while compiling class template member function 'int PersistentTable<std::string>::Find(const DataType &)'
           with
           [
               DataType=std::string
           ]
-C:\Users\pinel\OneDrive\Documents\GitHub\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(62,5): message : выполняется компиляция ссылки на экземпляр шаблон функции "int PersistentTable<std::string>::Find(const DataType &)"
+C:\Users\dotad\OneDrive\Рабочий стол\New folder (3)\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(68,5): message : see reference to function template instantiation 'int PersistentTable<std::string>::Find(const DataType &)' being compiled
           with
           [
               DataType=std::string
           ]
-C:\Users\pinel\OneDrive\Documents\GitHub\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(10,26): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "PersistentTable<std::string>"
-C:\Users\pinel\OneDrive\Documents\GitHub\Compiler\Compiler\Compiler\DataTable\VolatileTable.h(23,23): warning C4244: return: преобразование "__int64" в "int", возможна потеря данных
-C:\Users\pinel\OneDrive\Documents\GitHub\Compiler\Compiler\Compiler\DataTable\VolatileTable.h(18,1): message : во время компиляции функции-члена класс шаблон "int VolatileTable<std::string>::Find(const DataType &)"
+C:\Users\dotad\OneDrive\Рабочий стол\New folder (3)\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(10,26): message : see reference to class template instantiation 'PersistentTable<std::string>' being compiled
+C:\Users\dotad\OneDrive\Рабочий стол\New folder (3)\Compiler\Compiler\Compiler\DataTable\VolatileTable.h(23,23): warning C4244: 'return': conversion from '__int64' to 'int', possible loss of data
+C:\Users\dotad\OneDrive\Рабочий стол\New folder (3)\Compiler\Compiler\Compiler\DataTable\VolatileTable.h(18,1): message : while compiling class template member function 'int VolatileTable<std::string>::Find(const DataType &)'
           with
           [
               DataType=std::string
           ]
-C:\Users\pinel\OneDrive\Documents\GitHub\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(36,22): message : выполняется компиляция ссылки на экземпляр шаблон функции "int VolatileTable<std::string>::Find(const DataType &)"
+C:\Users\dotad\OneDrive\Рабочий стол\New folder (3)\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(40,22): message : see reference to function template instantiation 'int VolatileTable<std::string>::Find(const DataType &)' being compiled
           with
           [
               DataType=std::string
           ]
-C:\Users\pinel\OneDrive\Documents\GitHub\Compiler\Compiler\Compiler\LexicalAnalyzer.h(46,25): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "VolatileTable<std::string>"
-C:\Users\pinel\OneDrive\Documents\GitHub\Compiler\Compiler\Compiler\DataTable\VolatileTable.h(25,22): warning C4244: return: преобразование "__int64" в "int", возможна потеря данных
-  Compiler.vcxproj -> C:\Users\pinel\OneDrive\Documents\GitHub\Compiler\Compiler\x64\Debug\Compiler.exe
+C:\Users\dotad\OneDrive\Рабочий стол\New folder (3)\Compiler\Compiler\Compiler\LexicalAnalyzer.h(47,25): message : see reference to class template instantiation 'VolatileTable<std::string>' being compiled
+C:\Users\dotad\OneDrive\Рабочий стол\New folder (3)\Compiler\Compiler\Compiler\DataTable\VolatileTable.h(25,22): warning C4244: 'return': conversion from '__int64' to 'int', possible loss of data
+  Compiler.vcxproj -> C:\Users\dotad\OneDrive\Рабочий стол\New folder (3)\Compiler\Compiler\x64\Debug\Compiler.exe

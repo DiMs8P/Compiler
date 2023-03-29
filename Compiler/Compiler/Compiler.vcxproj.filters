@@ -66,6 +66,9 @@
     <ClCompile Include="IndentificatorTable.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ExceptionManager\ExceptionManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DataReader\CharsReader.h">
@@ -110,6 +113,9 @@
     <ClInclude Include="IndentificatorTable.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ExceptionManager\ExceptionManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="InputData\inputprog.txt">
@@ -124,5 +130,7 @@
     <Text Include="InputData\znak.txt">
       <Filter>Source Files\InputData</Filter>
     </Text>
+    <Text Include="errors.txt" />
+    <Text Include="Tokens.txt" />
   </ItemGroup>
 </Project>

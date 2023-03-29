@@ -50,10 +50,12 @@
     <ClInclude Include="Token.h" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="errors.txt" />
     <Text Include="InputData\inputprog.txt" />
     <Text Include="InputData\razdelitelb.txt" />
     <Text Include="InputData\word.txt" />
     <Text Include="InputData\znak.txt" />
+    <Text Include="Tokens.txt" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

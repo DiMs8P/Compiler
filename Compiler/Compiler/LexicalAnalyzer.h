@@ -7,6 +7,7 @@
 #include "Identificator.h"
 #include "DataTable/PersistentTable.h"
 #include "DataTable/VolatileTable.h"
+#include "ExceptionManager/ExceptionManager.h"
 
 struct Token;
 using namespace std;

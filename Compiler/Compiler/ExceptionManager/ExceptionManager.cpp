@@ -1,15 +1,21 @@
 ﻿#include "ExceptionManager.h"
 #include <fstream>
 
-void ExceptionManager::Exception(const std::string& errorMessage)
+ExceptionManager::ExceptionManager(std::ofstream& stream)
 {
-    std::ofstream errorStream;
-    errorStream.open (_outputFileName);
-    errorStream << errorMessage;
-    errorStream.close();
+	_stream = std::move(stream);
 }
 
-void ExceptionManager::SetOutputFileName(std::string& newFileName)
+void ExceptionManager::Exception(const std::string& errorMessage)
 {
-    _outputFileName.swap(newFileName);
+	if (_stream.is_open())
+	{
+		_stream << errorMessage << std::endl;
+	}
+	else
+	{
+		_stream.open("errors.txt");
+		_stream << errorMessage << std::endl;
+		_stream.close();
+	}
 }

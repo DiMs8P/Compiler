@@ -22,7 +22,10 @@ LexicalAnalyzer::LexicalAnalyzer()
 
 void LexicalAnalyzer::Analyze(const vector<char>& program)
 {
-	ExceptionManager Error;
+	std::ofstream errorStream;
+	errorStream.open("errors.txt");
+	ExceptionManager Error(errorStream);
+
 	string buffer;
 	ofstream fout("Tokens.txt");
 	for (int i = 0; i < program.size(); i++) {
@@ -33,24 +36,26 @@ void LexicalAnalyzer::Analyze(const vector<char>& program)
 				buffer.push_back(program[i]);
 				i++;
 			}
+			i--;
 			ConstantTable.Find(buffer);
 			fout << "(4, " << ConstantTable.Find(buffer) << " ) ";
 			/*TokenTable.Add({ 4,ConstantTable.Find(buffer) });
 			*/buffer.clear();
 		}
-		if (isupper(program[i]))
+		else if (isupper(program[i]))
 		{
 			while (isdigit(program[i]) || isupper(program[i]) || islower(program[i]))
 			{
 				buffer.push_back(program[i]);
 				i++;
 			}
+			i--;
 			IdTable.Find(buffer);
 			fout << "(5, " << IdTable.Find(buffer) << " ) ";
 			//TokenTable.Add({ 5,IdTable.Find(buffer) });
 			buffer.clear();
 		}
-		if (islower(program[i]))
+		else if (islower(program[i]))
 		{
 			while (islower(program[i]))
 			{
@@ -59,6 +64,7 @@ void LexicalAnalyzer::Analyze(const vector<char>& program)
 			}
 			if (program[i] == ' ' || program[i] == '(')
 			{
+
 				if (StringTables[0].Find(buffer) != -1)
 					fout << "(1, " << StringTables[0].Find(buffer) << " ) ";
 				//TokenTable.Add({ 1,StringTables[0].Find(buffer) });
@@ -69,6 +75,11 @@ void LexicalAnalyzer::Analyze(const vector<char>& program)
 					//TokenTable.Add({ 5, IdTable.Find(buffer) });
 				}
 
+				//if (program[i] == '(')
+				//{
+				//	fout << "(2, " << StringTables[1].Find("(") << " ) ";
+				//}
+				i--;
 			}
 			else
 			{
@@ -77,19 +88,21 @@ void LexicalAnalyzer::Analyze(const vector<char>& program)
 					buffer.push_back(program[i]);
 					i++;
 				}
+				i--;
 				IdTable.Find(buffer);
 				fout << "(5, " << IdTable.Find(buffer) << " ) ";
 				//TokenTable.Add({ 5, IdTable.Find(buffer) });
 			}
+
 			buffer.clear();
 		}
-		if (program[i] != ' ' && program[i] != '\n' && program[i] != '\t')
+		else if (program[i] != ' ' && program[i] != '\n' && program[i] != '\t')
 		{
 			buffer.push_back(program[i]);
 			if (StringTables[1].Find(buffer) != -1)
 				fout << "(2, " << StringTables[1].Find(buffer) << " ) ";
 			//TokenTable.Add({ 2, StringTables[1].Find(buffer) });
-			if (program[i] == '|')
+			else if (program[i] == '|')
 			{
 				if (i + 1 < program.size() && program[i + 1] == '|')
 				{
@@ -100,11 +113,11 @@ void LexicalAnalyzer::Analyze(const vector<char>& program)
 				}
 				else
 				{
-					Error.Exception("Ошибка какая-то");
+					Error.Exception("Wrong symbol");
 				}
 
 			}
-			if (program[i] == '&')
+			else if (program[i] == '&')
 			{
 				if (i + 1 < program.size() && program[i + 1] == '&')
 				{
@@ -115,7 +128,74 @@ void LexicalAnalyzer::Analyze(const vector<char>& program)
 				}
 				else
 				{
-					Error.Exception("Ошибка какая-то");
+					Error.Exception("Wrong symbol");
+				}
+			}
+			else if (program[i] == '+')
+			{
+				if (i + 1 < program.size() && program[i + 1] == '+')
+				{
+					i++;
+					buffer.push_back(program[i]);
+					fout << "(3, " << StringTables[2].Find(buffer) << " ) ";
+					//TokenTable.Add({ 3, StringTables[2].Find(buffer) });
+				}
+				else
+				{
+					if (StringTables[2].Find(buffer) != -1)
+					{
+						fout << "(3, " << StringTables[2].Find(buffer) << " ) ";
+					}
+					else {
+						Error.Exception("Wrong symbol");
+					}
+				}
+
+			}
+
+			else if (program[i] == '-')
+			{
+				if (i + 1 < program.size() && program[i + 1] == '-')
+				{
+					i++;
+					buffer.push_back(program[i]);
+					fout << "(3, " << StringTables[2].Find(buffer) << " ) ";
+					//TokenTable.Add({ 3, StringTables[2].Find(buffer) });
+				}
+				else
+				{
+					if (StringTables[2].Find(buffer) != -1)
+					{
+						fout << "(3, " << StringTables[2].Find(buffer) << " ) ";
+					}
+					else {
+						Error.Exception("Wrong symbol");
+					}
+				}
+			}
+			else if (program[i] == '/')
+			{
+				if (i + 1 < program.size() && program[i + 1] == '/')
+				{
+					i++;
+
+					while (i < program.size() && program[i] != '\n')
+					{
+						i++;
+					}
+				}
+				else if (i + 1 < program.size() && program[i + 1] == '*')
+				{
+					i = i + 2;
+					while (i + 1 < program.size() && program[i] != '*' && program[i + 1] != '/')
+					{
+						i++;
+					}
+					i++;
+				}
+				else
+				{
+					Error.Exception("Wrong symbol");
 				}
 			}
 			else
@@ -130,18 +210,25 @@ void LexicalAnalyzer::Analyze(const vector<char>& program)
 				else
 				{
 					if (StringTables[2].Find(buffer) != -1)
-					fout << "(3, " << StringTables[2].Find(buffer) << " ) ";
+						fout << "(3, " << StringTables[2].Find(buffer) << " ) ";
 					//TokenTable.Add({ 3, StringTables[2].Find(buffer) });
+					else
+					{
+						Error.Exception("Wrong symbol");
+					}
 				}
 			}
 			buffer.clear();
 		}
-		if (program[i] == '\n')
+		else if (program[i] == '\n')
 		{
 			fout << endl;
 		}
+		else if (program[i] != ' ' && program[i] != '\t')
+		{
+			Error.Exception("Wrong symbol");
+		}
 	}
-	int x = 2;
 }
 
 

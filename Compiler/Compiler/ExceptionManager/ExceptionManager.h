@@ -1,12 +1,13 @@
 ﻿#pragma once
+#include <fstream>
 #include <string>
 
 class ExceptionManager
 {
 public:
-    void Exception(const std::string& errorMessage);
-    void SetOutputFileName(std::string& newFileName);
+	ExceptionManager(std::ofstream& stream);
+	void Exception(const std::string& errorMessage);
 
 private:
-     std::string _outputFileName = "errors.txt";
+	std::ofstream _stream;
 };
