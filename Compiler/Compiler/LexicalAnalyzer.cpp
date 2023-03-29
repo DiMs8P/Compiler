@@ -37,10 +37,18 @@ void LexicalAnalyzer::Analyze(const vector<char>& program)
 				i++;
 			}
 			i--;
-			ConstantTable.Find(buffer);
-			fout << "(4, " << ConstantTable.Find(buffer) << " ) ";
-			/*TokenTable.Add({ 4,ConstantTable.Find(buffer) });
-			*/buffer.clear();
+			if (program[i+1] == ' ' || program[i+1] == ';')
+			{
+				ConstantTable.Find(buffer);
+				fout << "(4, " << ConstantTable.Find(buffer) << " ) ";
+				/*TokenTable.Add({ 4,ConstantTable.Find(buffer) });
+				*/
+			}
+			else
+			{
+				Error.Exception("Wrong symbol");
+			}
+			buffer.clear();
 		}
 		else if (isupper(program[i]))
 		{
