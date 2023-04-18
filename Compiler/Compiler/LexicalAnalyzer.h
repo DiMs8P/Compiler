@@ -2,7 +2,7 @@
 #include "Token.h"
 #include <string>
 
-
+#include "IndentificatorTable.h"
 #include "Constant.h"
 #include "Identificator.h"
 #include "DataTable/PersistentTable.h"
@@ -44,8 +44,13 @@ public:
 
 protected:
 	vector<PersistentTable<string>> StringTables;
-	VolatileTable <string> ConstantTable;
-	VolatileTable <Token> TokenTable;
-	VolatileTable <string> IdTable;
+	newVolatileTable <Constant> ConstantTable;
+	vector <Token> TokenTable;
+	//vector <Identificator> IdTable;
+	IndentificatorTable IdTable;
+
+	//VolatileTable <string> ConstantTable;
+	//VolatileTable <Token> TokenTable;
+	//VolatileTable <string> IdTable;
 };
 

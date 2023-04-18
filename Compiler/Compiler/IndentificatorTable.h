@@ -1,6 +1,6 @@
 #pragma once
 #include "Identificator.h"
-#include "DataTable/VolatileTable.h"
+#include "DataTable/newVolatileTable.h"
 
 namespace std
 {
@@ -16,7 +16,7 @@ namespace std
 	};
 }
 
-class IndentificatorTable : public VolatileTable<Identificator>
+class IndentificatorTable : public newVolatileTable<Identificator>
 {
 public:
 	void ChangeValue(int TableLine, int NewValue);

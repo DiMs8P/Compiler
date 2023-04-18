@@ -1,27 +1,77 @@
-﻿  LexicalAnalyzer.cpp
-C:\Users\dotad\OneDrive\Рабочий стол\New folder (3)\Compiler\Compiler\Compiler\DataTable\PersistentTable.h(24,22): warning C4244: 'return': conversion from '__int64' to 'int', possible loss of data
-C:\Users\dotad\OneDrive\Рабочий стол\New folder (3)\Compiler\Compiler\Compiler\DataTable\PersistentTable.h(18,1): message : while compiling class template member function 'int PersistentTable<std::string>::Find(const DataType &)'
+﻿  Compiler.cpp
+D:\repos\Compiler\Compiler\Compiler\DataTable\PersistentTable.h(24,22): warning C4244: return: преобразование "__int64" в "int", возможна потеря данных
+D:\repos\Compiler\Compiler\Compiler\DataTable\PersistentTable.h(18,1): message : во время компиляции функции-члена класс шаблон "int PersistentTable<std::string>::Find(const DataType &)"
           with
           [
               DataType=std::string
           ]
-C:\Users\dotad\OneDrive\Рабочий стол\New folder (3)\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(68,5): message : see reference to function template instantiation 'int PersistentTable<std::string>::Find(const DataType &)' being compiled
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\vector(2108,1): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "PersistentTable<std::string>"
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\vector(2098,1): message : во время компиляции функции-члена класс шаблон "void std::vector<PersistentTable<std::string>,std::allocator<PersistentTable<std::string>>>::_Tidy(void) noexcept"
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\vector(830,14): message : выполняется компиляция ссылки на экземпляр шаблон функции "void std::vector<PersistentTable<std::string>,std::allocator<PersistentTable<std::string>>>::_Tidy(void) noexcept"
+D:\repos\Compiler\Compiler\Compiler\LexicalAnalyzer.h(46,34): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "std::vector<PersistentTable<std::string>,std::allocator<PersistentTable<std::string>>>"
+  ExceptionManager.cpp
+  IndentificatorTable.cpp
+D:\repos\Compiler\Compiler\Compiler\DataTable\VolatileTable.h(23,23): warning C4244: return: преобразование "__int64" в "int", возможна потеря данных
+D:\repos\Compiler\Compiler\Compiler\DataTable\VolatileTable.h(18,1): message : во время компиляции функции-члена класс шаблон "int VolatileTable<Identificator>::Find(const DataType &)"
+          with
+          [
+              DataType=Identificator
+          ]
+D:\repos\Compiler\Compiler\Compiler\IndentificatorTable.h(20,1): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "VolatileTable<Identificator>"
+D:\repos\Compiler\Compiler\Compiler\DataTable\VolatileTable.h(25,22): warning C4244: return: преобразование "__int64" в "int", возможна потеря данных
+  LexicalAnalyzer.cpp
+D:\repos\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(40,18): error C2039: "Find": не является членом "std::vector<Constant,std::allocator<Constant>>".
+D:\repos\Compiler\Compiler\Compiler\LexicalAnalyzer.h(47,2): message : см. объявление "std::vector<Constant,std::allocator<Constant>>"
+D:\repos\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(41,36): error C2039: "Find": не является членом "std::vector<Constant,std::allocator<Constant>>".
+D:\repos\Compiler\Compiler\Compiler\LexicalAnalyzer.h(47,2): message : см. объявление "std::vector<Constant,std::allocator<Constant>>"
+D:\repos\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(53,12): error C2039: "Find": не является членом "std::vector<Identificator,std::allocator<Identificator>>".
+D:\repos\Compiler\Compiler\Compiler\LexicalAnalyzer.h(49,2): message : см. объявление "std::vector<Identificator,std::allocator<Identificator>>"
+D:\repos\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(54,30): error C2039: "Find": не является членом "std::vector<Identificator,std::allocator<Identificator>>".
+D:\repos\Compiler\Compiler\Compiler\LexicalAnalyzer.h(49,2): message : см. объявление "std::vector<Identificator,std::allocator<Identificator>>"
+D:\repos\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(73,14): error C2039: "Find": не является членом "std::vector<Identificator,std::allocator<Identificator>>".
+D:\repos\Compiler\Compiler\Compiler\LexicalAnalyzer.h(49,2): message : см. объявление "std::vector<Identificator,std::allocator<Identificator>>"
+D:\repos\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(74,32): error C2039: "Find": не является членом "std::vector<Identificator,std::allocator<Identificator>>".
+D:\repos\Compiler\Compiler\Compiler\LexicalAnalyzer.h(49,2): message : см. объявление "std::vector<Identificator,std::allocator<Identificator>>"
+D:\repos\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(92,13): error C2039: "Find": не является членом "std::vector<Identificator,std::allocator<Identificator>>".
+D:\repos\Compiler\Compiler\Compiler\LexicalAnalyzer.h(49,2): message : см. объявление "std::vector<Identificator,std::allocator<Identificator>>"
+D:\repos\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(93,31): error C2039: "Find": не является членом "std::vector<Identificator,std::allocator<Identificator>>".
+D:\repos\Compiler\Compiler\Compiler\LexicalAnalyzer.h(49,2): message : см. объявление "std::vector<Identificator,std::allocator<Identificator>>"
+  Main.cpp
+D:\repos\Compiler\Compiler\Compiler\DataTable\PersistentTable.h(24,22): warning C4244: return: преобразование "__int64" в "int", возможна потеря данных
+D:\repos\Compiler\Compiler\Compiler\DataTable\PersistentTable.h(18,1): message : во время компиляции функции-члена класс шаблон "int PersistentTable<std::string>::Find(const DataType &)"
           with
           [
               DataType=std::string
           ]
-C:\Users\dotad\OneDrive\Рабочий стол\New folder (3)\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(10,26): message : see reference to class template instantiation 'PersistentTable<std::string>' being compiled
-C:\Users\dotad\OneDrive\Рабочий стол\New folder (3)\Compiler\Compiler\Compiler\DataTable\VolatileTable.h(23,23): warning C4244: 'return': conversion from '__int64' to 'int', possible loss of data
-C:\Users\dotad\OneDrive\Рабочий стол\New folder (3)\Compiler\Compiler\Compiler\DataTable\VolatileTable.h(18,1): message : while compiling class template member function 'int VolatileTable<std::string>::Find(const DataType &)'
-          with
-          [
-              DataType=std::string
-          ]
-C:\Users\dotad\OneDrive\Рабочий стол\New folder (3)\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(40,22): message : see reference to function template instantiation 'int VolatileTable<std::string>::Find(const DataType &)' being compiled
-          with
-          [
-              DataType=std::string
-          ]
-C:\Users\dotad\OneDrive\Рабочий стол\New folder (3)\Compiler\Compiler\Compiler\LexicalAnalyzer.h(47,25): message : see reference to class template instantiation 'VolatileTable<std::string>' being compiled
-C:\Users\dotad\OneDrive\Рабочий стол\New folder (3)\Compiler\Compiler\Compiler\DataTable\VolatileTable.h(25,22): warning C4244: 'return': conversion from '__int64' to 'int', possible loss of data
-  Compiler.vcxproj -> C:\Users\dotad\OneDrive\Рабочий стол\New folder (3)\Compiler\Compiler\x64\Debug\Compiler.exe
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\vector(2108,1): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "PersistentTable<std::string>"
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\vector(2098,1): message : во время компиляции функции-члена класс шаблон "void std::vector<PersistentTable<std::string>,std::allocator<PersistentTable<std::string>>>::_Tidy(void) noexcept"
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\vector(830,14): message : выполняется компиляция ссылки на экземпляр шаблон функции "void std::vector<PersistentTable<std::string>,std::allocator<PersistentTable<std::string>>>::_Tidy(void) noexcept"
+D:\repos\Compiler\Compiler\Compiler\LexicalAnalyzer.h(46,34): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "std::vector<PersistentTable<std::string>,std::allocator<PersistentTable<std::string>>>"
+  CharsReader.cpp
+  FileReader.cpp
+  StringsReader.cpp
+  BaseDataTable.cpp
+  PersistentTable.cpp
+  VolatileTable.cpp
+  newVolatileTable.cpp
+D:\repos\Compiler\Compiler\Compiler\newVolatileTable.h(9,41): error C2039: "function": не является членом "std".
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\vector(24,1): message : см. объявление "std"
+D:\repos\Compiler\Compiler\Compiler\newVolatileTable.h(15,2): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "newVolatileTable<DataType>"
+D:\repos\Compiler\Compiler\Compiler\newVolatileTable.h(9,1): error C2061: синтаксическая ошибка: идентификатор "function"
+D:\repos\Compiler\Compiler\Compiler\newVolatileTable.h(14,2): error C3646: vector: неизвестный спецификатор переопределения
+D:\repos\Compiler\Compiler\Compiler\newVolatileTable.h(14,8): error C2143: синтаксическая ошибка: отсутствие ";" перед "<"
+D:\repos\Compiler\Compiler\Compiler\newVolatileTable.h(14,1): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\repos\Compiler\Compiler\Compiler\newVolatileTable.h(14,1): error C2238: непредвиденные лексемы перед ";"
+D:\repos\Compiler\Compiler\Compiler\newVolatileTable.h(32,68): error C2039: "function": не является членом "std".
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\vector(24,1): message : см. объявление "std"
+D:\repos\Compiler\Compiler\Compiler\newVolatileTable.h(32): error C2061: синтаксическая ошибка: идентификатор "function"
+D:\repos\Compiler\Compiler\Compiler\newVolatileTable.h(34,54): error C3861: lambda: идентификатор не найден
+D:\repos\Compiler\Compiler\Compiler\newVolatileTable.h(34,54): error C2065: lambda: необъявленный идентификатор
+D:\repos\Compiler\Compiler\Compiler\newVolatileTable.h(45,2): error C3861: _data: идентификатор не найден
+D:\repos\Compiler\Compiler\Compiler\newVolatileTable.h(45,2): error C2065: _data: необъявленный идентификатор
+D:\repos\Compiler\Compiler\Compiler\newVolatileTable.h(58,34): error C2039: "Load": не является членом "newVolatileTable<DataType>".
+D:\repos\Compiler\Compiler\Compiler\newVolatileTable.h(58,39): error C2065: IDataReader: необъявленный идентификатор
+D:\repos\Compiler\Compiler\Compiler\newVolatileTable.h(58,62): error C2065: reader: необъявленный идентификатор
+D:\repos\Compiler\Compiler\Compiler\newVolatileTable.h(59,1): error C2447: {: отсутствует заголовок функции (возможно, используется формальный список старого типа)
+  SyntacticalAnalyzer.cpp
+  Создание кода...

@@ -30,6 +30,7 @@
     <ClCompile Include="DataTable\BaseDataTable.cpp" />
     <ClCompile Include="DataTable\PersistentTable.cpp" />
     <ClCompile Include="DataTable\VolatileTable.cpp" />
+    <ClCompile Include="newVolatileTable.cpp" />
     <ClCompile Include="SyntacticalAnalyzer.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -46,6 +47,7 @@
     <ClInclude Include="DataTable\VolatileTable.h" />
     <ClInclude Include="Identificator.h" />
     <ClInclude Include="LexicalAnalyzer.h" />
+    <ClInclude Include="newVolatileTable.h" />
     <ClInclude Include="SyntacticalAnalyzer.h" />
     <ClInclude Include="Token.h" />
   </ItemGroup>

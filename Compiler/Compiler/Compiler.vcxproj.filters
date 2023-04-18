@@ -69,6 +69,9 @@
     <ClCompile Include="ExceptionManager\ExceptionManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="newVolatileTable.cpp">
+      <Filter>Source Files\DataTable</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DataReader\CharsReader.h">
@@ -115,6 +118,9 @@
     </ClInclude>
     <ClInclude Include="ExceptionManager\ExceptionManager.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="newVolatileTable.h">
+      <Filter>Source Files\DataTable</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
