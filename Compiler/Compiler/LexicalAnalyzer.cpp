@@ -7,7 +7,7 @@
 LexicalAnalyzer::LexicalAnalyzer()
 {
 	StringsReader readerString(R"(InputData\word.txt)");
-	PersistentTable<string> StringTable;
+	newPersistentTable<string> StringTable;
 	StringTable.Load(readerString);
 	StringTables.push_back(StringTable);
 
@@ -37,10 +37,9 @@ void LexicalAnalyzer::Analyze(const vector<char>& program)
 				i++;
 			}
 			i--;
-			ConstantTable.Find(buffer);
-			fout << "(4, " << ConstantTable.Find(buffer) << " ) ";
-			/*TokenTable.Add({ 4,ConstantTable.Find(buffer) });
-			*/buffer.clear();
+			fout << "(4, " << ConstantTable.Find({stoi(buffer), 0}) << " ) ";
+			TokenTable.Add({ 4,ConstantTable.Find({stoi(buffer)}) });
+			buffer.clear();
 		}
 		else if (isupper(program[i]))
 		{
@@ -50,9 +49,8 @@ void LexicalAnalyzer::Analyze(const vector<char>& program)
 				i++;
 			}
 			i--;
-			IdTable.Find(buffer);
-			fout << "(5, " << IdTable.Find(buffer) << " ) ";
-			//TokenTable.Add({ 5,IdTable.Find(buffer) });
+			fout << "(5, " << IdTable.Find({buffer}) << " ) ";
+			TokenTable.Add({ 5,IdTable.Find({buffer}) });
 			buffer.clear();
 		}
 		else if (islower(program[i]))
@@ -66,13 +64,14 @@ void LexicalAnalyzer::Analyze(const vector<char>& program)
 			{
 
 				if (StringTables[0].Find(buffer) != -1)
+				{
 					fout << "(1, " << StringTables[0].Find(buffer) << " ) ";
-				//TokenTable.Add({ 1,StringTables[0].Find(buffer) });
+					TokenTable.Add({ 1,StringTables[0].Find(buffer) });
+				}
 				else
 				{
-					IdTable.Find(buffer);
-					fout << "(5, " << IdTable.Find(buffer) << " ) ";
-					//TokenTable.Add({ 5, IdTable.Find(buffer) });
+					fout << "(5, " << IdTable.Find({buffer}) << " ) ";
+					TokenTable.Add({ 5, IdTable.Find({buffer}) });
 				}
 
 				//if (program[i] == '(')
@@ -89,9 +88,8 @@ void LexicalAnalyzer::Analyze(const vector<char>& program)
 					i++;
 				}
 				i--;
-				IdTable.Find(buffer);
-				fout << "(5, " << IdTable.Find(buffer) << " ) ";
-				//TokenTable.Add({ 5, IdTable.Find(buffer) });
+				fout << "(5, " << IdTable.Find({buffer}) << " ) ";
+				TokenTable.Add({ 5, IdTable.Find({buffer}) });
 			}
 
 			buffer.clear();
@@ -100,8 +98,10 @@ void LexicalAnalyzer::Analyze(const vector<char>& program)
 		{
 			buffer.push_back(program[i]);
 			if (StringTables[1].Find(buffer) != -1)
+			{
 				fout << "(2, " << StringTables[1].Find(buffer) << " ) ";
-			//TokenTable.Add({ 2, StringTables[1].Find(buffer) });
+				TokenTable.Add({ 2, StringTables[1].Find(buffer) });
+			}
 			else if (program[i] == '|')
 			{
 				if (i + 1 < program.size() && program[i + 1] == '|')
@@ -109,7 +109,7 @@ void LexicalAnalyzer::Analyze(const vector<char>& program)
 					i++;
 					buffer.push_back(program[i]);
 					fout << "(3, " << StringTables[2].Find(buffer) << " ) ";
-					//TokenTable.Add({ 3, StringTables[2].Find(buffer) });
+					TokenTable.Add({ 3, StringTables[2].Find(buffer) });
 				}
 				else
 				{
@@ -124,7 +124,7 @@ void LexicalAnalyzer::Analyze(const vector<char>& program)
 					i++;
 					buffer.push_back(program[i]);
 					fout << "(3, " << StringTables[2].Find(buffer) << " ) ";
-					//TokenTable.Add({ 3, StringTables[2].Find(buffer) });
+					TokenTable.Add({ 3, StringTables[2].Find(buffer) });
 				}
 				else
 				{
@@ -138,7 +138,7 @@ void LexicalAnalyzer::Analyze(const vector<char>& program)
 					i++;
 					buffer.push_back(program[i]);
 					fout << "(3, " << StringTables[2].Find(buffer) << " ) ";
-					//TokenTable.Add({ 3, StringTables[2].Find(buffer) });
+					TokenTable.Add({ 3, StringTables[2].Find(buffer) });
 				}
 				else
 				{
@@ -160,7 +160,7 @@ void LexicalAnalyzer::Analyze(const vector<char>& program)
 					i++;
 					buffer.push_back(program[i]);
 					fout << "(3, " << StringTables[2].Find(buffer) << " ) ";
-					//TokenTable.Add({ 3, StringTables[2].Find(buffer) });
+					TokenTable.Add({ 3, StringTables[2].Find(buffer) });
 				}
 				else
 				{
@@ -205,13 +205,15 @@ void LexicalAnalyzer::Analyze(const vector<char>& program)
 					i++;
 					buffer.push_back(program[i]);
 					fout << "(3, " << StringTables[2].Find(buffer) << " ) ";
-					//TokenTable.Add({ 3, StringTables[2].Find(buffer) });
+					TokenTable.Add({ 3, StringTables[2].Find(buffer) });
 				}
 				else
 				{
 					if (StringTables[2].Find(buffer) != -1)
+					{
 						fout << "(3, " << StringTables[2].Find(buffer) << " ) ";
-					//TokenTable.Add({ 3, StringTables[2].Find(buffer) });
+						TokenTable.Add({ 3, StringTables[2].Find(buffer) });
+					}
 					else
 					{
 						Error.Exception("Wrong symbol");

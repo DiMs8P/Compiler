@@ -19,7 +19,15 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AST\ExpressionNode.cpp" />
+    <ClCompile Include="AST\Expressions\BinaryOperationNode.cpp" />
+    <ClCompile Include="AST\Expressions\ConstantNode.cpp" />
+    <ClCompile Include="AST\Expressions\IndentificatiorNode.cpp" />
+    <ClCompile Include="AST\Expressions\UnaryOperationNode.cpp" />
+    <ClCompile Include="AST\StatementNodes.cpp" />
     <ClCompile Include="Compiler.cpp" />
+    <ClCompile Include="DataTable\newPersistentTable.cpp" />
+    <ClCompile Include="DataTable\newVolatileTable.cpp" />
     <ClCompile Include="ExceptionManager\ExceptionManager.cpp" />
     <ClCompile Include="IndentificatorTable.cpp" />
     <ClCompile Include="LexicalAnalyzer.cpp" />
@@ -30,12 +38,19 @@
     <ClCompile Include="DataTable\BaseDataTable.cpp" />
     <ClCompile Include="DataTable\PersistentTable.cpp" />
     <ClCompile Include="DataTable\VolatileTable.cpp" />
-    <ClCompile Include="newVolatileTable.cpp" />
     <ClCompile Include="SyntacticalAnalyzer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AST\ExpressionNode.h" />
+    <ClInclude Include="AST\Expressions\BinaryOperationNode.h" />
+    <ClInclude Include="AST\Expressions\ConstantNode.h" />
+    <ClInclude Include="AST\Expressions\IndentificatiorNode.h" />
+    <ClInclude Include="AST\Expressions\UnaryOperationNode.h" />
+    <ClInclude Include="AST\StatementNodes.h" />
     <ClInclude Include="Compiler.h" />
     <ClInclude Include="Constant.h" />
+    <ClInclude Include="DataTable\newPersistentTable.h" />
+    <ClInclude Include="DataTable\newVolatileTable.h" />
     <ClInclude Include="ExceptionManager\ExceptionManager.h" />
     <ClInclude Include="IndentificatorTable.h" />
     <ClInclude Include="DataReader\CharsReader.h" />
@@ -47,7 +62,6 @@
     <ClInclude Include="DataTable\VolatileTable.h" />
     <ClInclude Include="Identificator.h" />
     <ClInclude Include="LexicalAnalyzer.h" />
-    <ClInclude Include="newVolatileTable.h" />
     <ClInclude Include="SyntacticalAnalyzer.h" />
     <ClInclude Include="Token.h" />
   </ItemGroup>

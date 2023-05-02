@@ -8,6 +8,7 @@ class PersistentTable : public BaseDataTable<DataType>
 {
 public:
 	virtual int Find(const DataType& elem) override;
+	// virtual DataType Get(int lineNumber);
 	virtual void Load(IDataReader<DataType>& reader) override;
 
 	void ShowData();
@@ -23,6 +24,12 @@ int PersistentTable<DataType>::Find(const DataType& elem)
 	}
 	return std::distance(this->_data.begin(), It);
 }
+
+// template <class DataType>
+// DataType PersistentTable<DataType>::Get(int lineNumber)
+// {
+// 	return 
+// }
 
 template <class DataType>
 void PersistentTable<DataType>::Load(IDataReader<DataType>& reader)

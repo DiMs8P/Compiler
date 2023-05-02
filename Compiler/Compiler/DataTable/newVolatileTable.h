@@ -1,16 +1,20 @@
 #pragma once
 #include<vector>
 
+#include "../DataReader/IDataReader.h"
+
 template<typename DataType>
 class newVolatileTable
 {
 public:
 	virtual int Find(const DataType& elem);
+	int Size() const;
 	//bool FindIf(const DataType& elem, std::function<bool(const DataType&)> lambda);
 	virtual void Add(const DataType& elem);
+	void Load(IDataReader<DataType>& reader);
 	DataType GetElemByLine(const int LineNumber) const;
 protected:
-	vector<DataType> _data;
+	std::vector<DataType> _data;
 };
 
 template <class DataType>
@@ -21,14 +25,13 @@ int newVolatileTable<DataType>::Find(const DataType& elem)
 		if (elem == _data[i]) return i;
 	}
 	Add(elem);
-	return i;
-	//auto It = this->_data.find(elem);
-	//if (It == this->_data.end())
-	//{
-	//	Add(elem);
-	//	return std::distance(this->_data.begin(), It);
-	//}
-	//return std::distance(this->_data.begin(), It);
+	return _data.size() - 1;
+}
+
+template <typename DataType>
+int newVolatileTable<DataType>::Size() const
+{
+	return _data.size();
 }
 
 //template <class DataType>
@@ -49,16 +52,17 @@ void newVolatileTable<DataType>::Add(const DataType& elem)
 }
 
 template <typename DataType>
+void newVolatileTable<DataType>::Load(IDataReader<DataType>& reader)
+{
+	_data.clear();
+	for (const auto& value : reader.Read()) {
+		this->_data.push_back(value);
+	}
+}
+
+template <typename DataType>
 DataType newVolatileTable<DataType>::GetElemByLine(const int LineNumber) const
 {
 	return _data[LineNumber];
 }
 
-//template <class DataType>
-//void newVolatileTable<DataType>::Load(IDataReader<DataType>& reader)
-//{
-//	this->_data.clear();
-//	for (const auto& value : reader.Read()) {
-//		this->_data.insert(value);
-//	}
-//}

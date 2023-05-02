@@ -5,6 +5,7 @@
 #include "IndentificatorTable.h"
 #include "Constant.h"
 #include "Identificator.h"
+#include "DataTable/newPersistentTable.h"
 #include "DataTable/PersistentTable.h"
 #include "DataTable/VolatileTable.h"
 #include "ExceptionManager/ExceptionManager.h"
@@ -43,9 +44,9 @@ public:
 	void Analyze(const vector<char>& program);
 
 protected:
-	vector<PersistentTable<string>> StringTables;
+	vector<newPersistentTable<string>> StringTables;
 	newVolatileTable <Constant> ConstantTable;
-	vector <Token> TokenTable;
+	newVolatileTable <Token> TokenTable;
 	//vector <Identificator> IdTable;
 	IndentificatorTable IdTable;
 

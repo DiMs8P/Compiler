@@ -13,4 +13,6 @@ Compiler::Compiler(const string& inputFilePath)
 void Compiler::Compile()
 {
 	lexicalAnalyzer.Analyze(program);
+	syntacticalAnalyzer.Init(lexicalAnalyzer.ConstantTable, lexicalAnalyzer.TokenTable, lexicalAnalyzer.IdTable, lexicalAnalyzer.StringTables);
+	syntacticalAnalyzer.Analyze();
 }

@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>D:\repos\Compiler\Compiler\x64\Debug\Compiler.exe</FullPath>
+      <FullPath>D:\RiderProjects\Compiler\Compiler\x64\Debug\Compiler.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

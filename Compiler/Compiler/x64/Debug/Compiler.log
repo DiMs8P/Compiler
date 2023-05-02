@@ -1,52 +1,120 @@
 ﻿  Compiler.cpp
-D:\repos\Compiler\Compiler\Compiler\DataTable\PersistentTable.h(24,22): warning C4244: return: преобразование "__int64" в "int", возможна потеря данных
-D:\repos\Compiler\Compiler\Compiler\DataTable\PersistentTable.h(18,1): message : во время компиляции функции-члена класс шаблон "int PersistentTable<std::string>::Find(const DataType &)"
-          with
-          [
-              DataType=std::string
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\vector(2108,1): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "PersistentTable<std::string>"
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\vector(2098,1): message : во время компиляции функции-члена класс шаблон "void std::vector<PersistentTable<std::string>,std::allocator<PersistentTable<std::string>>>::_Tidy(void) noexcept"
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\vector(830,14): message : выполняется компиляция ссылки на экземпляр шаблон функции "void std::vector<PersistentTable<std::string>,std::allocator<PersistentTable<std::string>>>::_Tidy(void) noexcept"
-D:\repos\Compiler\Compiler\Compiler\LexicalAnalyzer.h(46,34): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "std::vector<PersistentTable<std::string>,std::allocator<PersistentTable<std::string>>>"
+D:\RiderProjects\Compiler\Compiler\Compiler\DataTable\newVolatileTable.h(24,9): error C3861: 'i': identifier not found
+D:\RiderProjects\Compiler\Compiler\Compiler\DataTable\newVolatileTable.h(24,9): error C2065: 'i': undeclared identifier
   ExceptionManager.cpp
   IndentificatorTable.cpp
-D:\repos\Compiler\Compiler\Compiler\DataTable\VolatileTable.h(23,23): warning C4244: return: преобразование "__int64" в "int", возможна потеря данных
-D:\repos\Compiler\Compiler\Compiler\DataTable\VolatileTable.h(18,1): message : во время компиляции функции-члена класс шаблон "int VolatileTable<Identificator>::Find(const DataType &)"
+D:\RiderProjects\Compiler\Compiler\Compiler\DataTable\newVolatileTable.h(24,9): error C3861: 'i': identifier not found
+D:\RiderProjects\Compiler\Compiler\Compiler\DataTable\newVolatileTable.h(24,9): error C2065: 'i': undeclared identifier
+  LexicalAnalyzer.cpp
+D:\RiderProjects\Compiler\Compiler\Compiler\DataTable\newVolatileTable.h(24,9): error C3861: 'i': identifier not found
+D:\RiderProjects\Compiler\Compiler\Compiler\DataTable\newVolatileTable.h(24,9): error C2065: 'i': undeclared identifier
+D:\RiderProjects\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(40,17): error C2664: 'int newVolatileTable<Constant>::Find(const DataType &)': cannot convert argument 1 from 'std::string' to 'const DataType &'
+          with
+          [
+              DataType=Constant
+          ]
+D:\RiderProjects\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(40,23): message : Reason: cannot convert from 'std::string' to 'const DataType'
+          with
+          [
+              DataType=Constant
+          ]
+D:\RiderProjects\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(40,23): message : No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+D:\RiderProjects\Compiler\Compiler\Compiler\DataTable\newVolatileTable.h(8,14): message : see declaration of 'newVolatileTable<Constant>::Find'
+D:\RiderProjects\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(40,17): message : while trying to match the argument list '(std::string)'
+D:\RiderProjects\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(41,35): error C2664: 'int newVolatileTable<Constant>::Find(const DataType &)': cannot convert argument 1 from 'std::string' to 'const DataType &'
+          with
+          [
+              DataType=Constant
+          ]
+D:\RiderProjects\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(41,41): message : Reason: cannot convert from 'std::string' to 'const DataType'
+          with
+          [
+              DataType=Constant
+          ]
+D:\RiderProjects\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(41,41): message : No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+D:\RiderProjects\Compiler\Compiler\Compiler\DataTable\newVolatileTable.h(8,14): message : see declaration of 'newVolatileTable<Constant>::Find'
+D:\RiderProjects\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(41,35): message : while trying to match the argument list '(std::string)'
+D:\RiderProjects\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(53,11): error C2664: 'int newVolatileTable<Identificator>::Find(const DataType &)': cannot convert argument 1 from 'std::string' to 'const DataType &'
           with
           [
               DataType=Identificator
           ]
-D:\repos\Compiler\Compiler\Compiler\IndentificatorTable.h(20,1): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "VolatileTable<Identificator>"
-D:\repos\Compiler\Compiler\Compiler\DataTable\VolatileTable.h(25,22): warning C4244: return: преобразование "__int64" в "int", возможна потеря данных
-  LexicalAnalyzer.cpp
-D:\repos\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(40,18): error C2039: "Find": не является членом "std::vector<Constant,std::allocator<Constant>>".
-D:\repos\Compiler\Compiler\Compiler\LexicalAnalyzer.h(47,2): message : см. объявление "std::vector<Constant,std::allocator<Constant>>"
-D:\repos\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(41,36): error C2039: "Find": не является членом "std::vector<Constant,std::allocator<Constant>>".
-D:\repos\Compiler\Compiler\Compiler\LexicalAnalyzer.h(47,2): message : см. объявление "std::vector<Constant,std::allocator<Constant>>"
-D:\repos\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(53,12): error C2039: "Find": не является членом "std::vector<Identificator,std::allocator<Identificator>>".
-D:\repos\Compiler\Compiler\Compiler\LexicalAnalyzer.h(49,2): message : см. объявление "std::vector<Identificator,std::allocator<Identificator>>"
-D:\repos\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(54,30): error C2039: "Find": не является членом "std::vector<Identificator,std::allocator<Identificator>>".
-D:\repos\Compiler\Compiler\Compiler\LexicalAnalyzer.h(49,2): message : см. объявление "std::vector<Identificator,std::allocator<Identificator>>"
-D:\repos\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(73,14): error C2039: "Find": не является членом "std::vector<Identificator,std::allocator<Identificator>>".
-D:\repos\Compiler\Compiler\Compiler\LexicalAnalyzer.h(49,2): message : см. объявление "std::vector<Identificator,std::allocator<Identificator>>"
-D:\repos\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(74,32): error C2039: "Find": не является членом "std::vector<Identificator,std::allocator<Identificator>>".
-D:\repos\Compiler\Compiler\Compiler\LexicalAnalyzer.h(49,2): message : см. объявление "std::vector<Identificator,std::allocator<Identificator>>"
-D:\repos\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(92,13): error C2039: "Find": не является членом "std::vector<Identificator,std::allocator<Identificator>>".
-D:\repos\Compiler\Compiler\Compiler\LexicalAnalyzer.h(49,2): message : см. объявление "std::vector<Identificator,std::allocator<Identificator>>"
-D:\repos\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(93,31): error C2039: "Find": не является членом "std::vector<Identificator,std::allocator<Identificator>>".
-D:\repos\Compiler\Compiler\Compiler\LexicalAnalyzer.h(49,2): message : см. объявление "std::vector<Identificator,std::allocator<Identificator>>"
-  Main.cpp
-D:\repos\Compiler\Compiler\Compiler\DataTable\PersistentTable.h(24,22): warning C4244: return: преобразование "__int64" в "int", возможна потеря данных
-D:\repos\Compiler\Compiler\Compiler\DataTable\PersistentTable.h(18,1): message : во время компиляции функции-члена класс шаблон "int PersistentTable<std::string>::Find(const DataType &)"
+D:\RiderProjects\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(53,17): message : Reason: cannot convert from 'std::string' to 'const DataType'
           with
           [
-              DataType=std::string
+              DataType=Identificator
           ]
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\vector(2108,1): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "PersistentTable<std::string>"
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\vector(2098,1): message : во время компиляции функции-члена класс шаблон "void std::vector<PersistentTable<std::string>,std::allocator<PersistentTable<std::string>>>::_Tidy(void) noexcept"
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\vector(830,14): message : выполняется компиляция ссылки на экземпляр шаблон функции "void std::vector<PersistentTable<std::string>,std::allocator<PersistentTable<std::string>>>::_Tidy(void) noexcept"
-D:\repos\Compiler\Compiler\Compiler\LexicalAnalyzer.h(46,34): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "std::vector<PersistentTable<std::string>,std::allocator<PersistentTable<std::string>>>"
+D:\RiderProjects\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(53,17): message : No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+D:\RiderProjects\Compiler\Compiler\Compiler\DataTable\newVolatileTable.h(8,14): message : see declaration of 'newVolatileTable<Identificator>::Find'
+D:\RiderProjects\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(53,11): message : while trying to match the argument list '(std::string)'
+D:\RiderProjects\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(54,29): error C2664: 'int newVolatileTable<Identificator>::Find(const DataType &)': cannot convert argument 1 from 'std::string' to 'const DataType &'
+          with
+          [
+              DataType=Identificator
+          ]
+D:\RiderProjects\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(54,35): message : Reason: cannot convert from 'std::string' to 'const DataType'
+          with
+          [
+              DataType=Identificator
+          ]
+D:\RiderProjects\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(54,35): message : No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+D:\RiderProjects\Compiler\Compiler\Compiler\DataTable\newVolatileTable.h(8,14): message : see declaration of 'newVolatileTable<Identificator>::Find'
+D:\RiderProjects\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(54,29): message : while trying to match the argument list '(std::string)'
+D:\RiderProjects\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(73,13): error C2664: 'int newVolatileTable<Identificator>::Find(const DataType &)': cannot convert argument 1 from 'std::string' to 'const DataType &'
+          with
+          [
+              DataType=Identificator
+          ]
+D:\RiderProjects\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(73,19): message : Reason: cannot convert from 'std::string' to 'const DataType'
+          with
+          [
+              DataType=Identificator
+          ]
+D:\RiderProjects\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(73,19): message : No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+D:\RiderProjects\Compiler\Compiler\Compiler\DataTable\newVolatileTable.h(8,14): message : see declaration of 'newVolatileTable<Identificator>::Find'
+D:\RiderProjects\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(73,13): message : while trying to match the argument list '(std::string)'
+D:\RiderProjects\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(74,31): error C2664: 'int newVolatileTable<Identificator>::Find(const DataType &)': cannot convert argument 1 from 'std::string' to 'const DataType &'
+          with
+          [
+              DataType=Identificator
+          ]
+D:\RiderProjects\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(74,37): message : Reason: cannot convert from 'std::string' to 'const DataType'
+          with
+          [
+              DataType=Identificator
+          ]
+D:\RiderProjects\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(74,37): message : No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+D:\RiderProjects\Compiler\Compiler\Compiler\DataTable\newVolatileTable.h(8,14): message : see declaration of 'newVolatileTable<Identificator>::Find'
+D:\RiderProjects\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(74,31): message : while trying to match the argument list '(std::string)'
+D:\RiderProjects\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(92,12): error C2664: 'int newVolatileTable<Identificator>::Find(const DataType &)': cannot convert argument 1 from 'std::string' to 'const DataType &'
+          with
+          [
+              DataType=Identificator
+          ]
+D:\RiderProjects\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(92,18): message : Reason: cannot convert from 'std::string' to 'const DataType'
+          with
+          [
+              DataType=Identificator
+          ]
+D:\RiderProjects\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(92,18): message : No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+D:\RiderProjects\Compiler\Compiler\Compiler\DataTable\newVolatileTable.h(8,14): message : see declaration of 'newVolatileTable<Identificator>::Find'
+D:\RiderProjects\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(92,12): message : while trying to match the argument list '(std::string)'
+D:\RiderProjects\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(93,30): error C2664: 'int newVolatileTable<Identificator>::Find(const DataType &)': cannot convert argument 1 from 'std::string' to 'const DataType &'
+          with
+          [
+              DataType=Identificator
+          ]
+D:\RiderProjects\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(93,36): message : Reason: cannot convert from 'std::string' to 'const DataType'
+          with
+          [
+              DataType=Identificator
+          ]
+D:\RiderProjects\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(93,36): message : No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+D:\RiderProjects\Compiler\Compiler\Compiler\DataTable\newVolatileTable.h(8,14): message : see declaration of 'newVolatileTable<Identificator>::Find'
+D:\RiderProjects\Compiler\Compiler\Compiler\LexicalAnalyzer.cpp(93,30): message : while trying to match the argument list '(std::string)'
+  Main.cpp
+D:\RiderProjects\Compiler\Compiler\Compiler\DataTable\newVolatileTable.h(24,9): error C3861: 'i': identifier not found
+D:\RiderProjects\Compiler\Compiler\Compiler\DataTable\newVolatileTable.h(24,9): error C2065: 'i': undeclared identifier
   CharsReader.cpp
   FileReader.cpp
   StringsReader.cpp
@@ -54,24 +122,6 @@ D:\repos\Compiler\Compiler\Compiler\LexicalAnalyzer.h(46,34): message : выпо
   PersistentTable.cpp
   VolatileTable.cpp
   newVolatileTable.cpp
-D:\repos\Compiler\Compiler\Compiler\newVolatileTable.h(9,41): error C2039: "function": не является членом "std".
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\vector(24,1): message : см. объявление "std"
-D:\repos\Compiler\Compiler\Compiler\newVolatileTable.h(15,2): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "newVolatileTable<DataType>"
-D:\repos\Compiler\Compiler\Compiler\newVolatileTable.h(9,1): error C2061: синтаксическая ошибка: идентификатор "function"
-D:\repos\Compiler\Compiler\Compiler\newVolatileTable.h(14,2): error C3646: vector: неизвестный спецификатор переопределения
-D:\repos\Compiler\Compiler\Compiler\newVolatileTable.h(14,8): error C2143: синтаксическая ошибка: отсутствие ";" перед "<"
-D:\repos\Compiler\Compiler\Compiler\newVolatileTable.h(14,1): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
-D:\repos\Compiler\Compiler\Compiler\newVolatileTable.h(14,1): error C2238: непредвиденные лексемы перед ";"
-D:\repos\Compiler\Compiler\Compiler\newVolatileTable.h(32,68): error C2039: "function": не является членом "std".
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\vector(24,1): message : см. объявление "std"
-D:\repos\Compiler\Compiler\Compiler\newVolatileTable.h(32): error C2061: синтаксическая ошибка: идентификатор "function"
-D:\repos\Compiler\Compiler\Compiler\newVolatileTable.h(34,54): error C3861: lambda: идентификатор не найден
-D:\repos\Compiler\Compiler\Compiler\newVolatileTable.h(34,54): error C2065: lambda: необъявленный идентификатор
-D:\repos\Compiler\Compiler\Compiler\newVolatileTable.h(45,2): error C3861: _data: идентификатор не найден
-D:\repos\Compiler\Compiler\Compiler\newVolatileTable.h(45,2): error C2065: _data: необъявленный идентификатор
-D:\repos\Compiler\Compiler\Compiler\newVolatileTable.h(58,34): error C2039: "Load": не является членом "newVolatileTable<DataType>".
-D:\repos\Compiler\Compiler\Compiler\newVolatileTable.h(58,39): error C2065: IDataReader: необъявленный идентификатор
-D:\repos\Compiler\Compiler\Compiler\newVolatileTable.h(58,62): error C2065: reader: необъявленный идентификатор
-D:\repos\Compiler\Compiler\Compiler\newVolatileTable.h(59,1): error C2447: {: отсутствует заголовок функции (возможно, используется формальный список старого типа)
+c1xx : fatal  error C1083: Cannot open source file: 'newVolatileTable.cpp': No such file or directory
   SyntacticalAnalyzer.cpp
-  Создание кода...
+  Generating Code...
