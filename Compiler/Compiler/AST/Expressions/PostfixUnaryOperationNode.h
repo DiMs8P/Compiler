@@ -2,10 +2,10 @@
 #include "../ExpressionNode.h"
 #include "../../Token.h"
 
-class UnaryOperationNode : ExpressionNode
+class PostfixUnaryOperationNode : public ExpressionNode
 {
 public:
-    UnaryOperationNode(const Token& token, const ExpressionNode& operand)
+    PostfixUnaryOperationNode(const Token& token, ExpressionNode* operand)
         : _token(token),
           _operand(operand)
     {
@@ -13,5 +13,5 @@ public:
 
 private:
     Token _token;
-    ExpressionNode _operand;
+    ExpressionNode* _operand;
 };

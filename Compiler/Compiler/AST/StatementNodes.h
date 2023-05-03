@@ -4,7 +4,7 @@
 class StatementNodes : public ExpressionNode
 {
 public:
-    void Add(const ExpressionNode& node);
+    void Add(ExpressionNode* node);
 private:
-    vector<ExpressionNode> _expressionNodes;
+    vector<ExpressionNode*> _expressionNodes;
 };

@@ -18,4 +18,6 @@ void ExceptionManager::Exception(const std::string& errorMessage)
 		_stream << errorMessage << std::endl;
 		_stream.close();
 	}
+
+	throw std::exception(errorMessage.c_str());
 }

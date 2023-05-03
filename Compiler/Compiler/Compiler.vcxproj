@@ -21,9 +21,13 @@
   <ItemGroup>
     <ClCompile Include="AST\ExpressionNode.cpp" />
     <ClCompile Include="AST\Expressions\BinaryOperationNode.cpp" />
+    <ClCompile Include="AST\Expressions\ConditionNode.cpp" />
     <ClCompile Include="AST\Expressions\ConstantNode.cpp" />
+    <ClCompile Include="AST\Expressions\ForNode.cpp" />
     <ClCompile Include="AST\Expressions\IndentificatiorNode.cpp" />
-    <ClCompile Include="AST\Expressions\UnaryOperationNode.cpp" />
+    <ClCompile Include="AST\Expressions\NothingNode.cpp" />
+    <ClCompile Include="AST\Expressions\PostfixUnaryOperationNode.cpp" />
+    <ClCompile Include="AST\Expressions\PrefixUnaryOperationNode.cpp" />
     <ClCompile Include="AST\StatementNodes.cpp" />
     <ClCompile Include="Compiler.cpp" />
     <ClCompile Include="DataTable\newPersistentTable.cpp" />
@@ -43,9 +47,13 @@
   <ItemGroup>
     <ClInclude Include="AST\ExpressionNode.h" />
     <ClInclude Include="AST\Expressions\BinaryOperationNode.h" />
+    <ClInclude Include="AST\Expressions\ConditionNode.h" />
     <ClInclude Include="AST\Expressions\ConstantNode.h" />
+    <ClInclude Include="AST\Expressions\ForNode.h" />
     <ClInclude Include="AST\Expressions\IndentificatiorNode.h" />
-    <ClInclude Include="AST\Expressions\UnaryOperationNode.h" />
+    <ClInclude Include="AST\Expressions\NothingNode.h" />
+    <ClInclude Include="AST\Expressions\PostfixUnaryOperationNode.h" />
+    <ClInclude Include="AST\Expressions\PrefixUnaryOperationNode.h" />
     <ClInclude Include="AST\StatementNodes.h" />
     <ClInclude Include="Compiler.h" />
     <ClInclude Include="Constant.h" />

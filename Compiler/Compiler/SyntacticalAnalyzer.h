@@ -2,10 +2,13 @@
 #include "Constant.h"
 #include "IndentificatorTable.h"
 #include "Token.h"
+#include "map"
 #include "AST/StatementNodes.h"
 #include "DataTable/newPersistentTable.h"
 #include "DataTable/PersistentTable.h"
 #include "ExceptionManager/ExceptionManager.h"
+
+using namespace std;
 
 enum TokenType
 {
@@ -16,6 +19,7 @@ enum TokenType
 	IDENTIFIER = 4,
 };
 
+// YOU CAN"T CHANGE IT!!!! TYPE ME IF NEEDED
 enum TokenValue
 {
 	FOR = 0,
@@ -41,6 +45,7 @@ enum TokenValue
 	INCREMENT = 50,
 	DECREMENT = 51,
 	ALL = 52,
+	DOUBLEEQUAL = 53,
 
 	INITIALIZED = 60,
 	NOTINITIALIZED = 61
@@ -54,11 +59,21 @@ public:
 protected:
 	void Init(const newVolatileTable<Constant>& constantTable, const newVolatileTable <Token>& tokenTable,const  IndentificatorTable& idTable, const vector<newPersistentTable<string>>& stringTables);
 	string GetKeyWordValue(int lineNumber);
-	ExpressionNode ParseVariableOrNumber();
-	ExpressionNode ParseParentheses();
-	ExpressionNode ParseFormula();
-	ExpressionNode& ParseUnar();
-	void ParseStatements(StatementNodes& nodes);
+	ExpressionNode* ParseVariableOrNumber();
+	ExpressionNode* ParseParentheses();
+	ExpressionNode* ParseFormula();
+	ExpressionNode* ParsePrefixUnar();
+	ExpressionNode* ParsePostfixUnar();
+	ExpressionNode* ParseFor();
+	ExpressionNode* ParseStatements();
+	bool TryParseForAction(ExpressionNode*& action);
+	bool TryParseForCondition(ExpressionNode*& condition);
+	bool TryParseForInitializing(ExpressionNode*& initialization);
+	bool TryParseIndentificatorWithInitialization(ExpressionNode*& value1);
+	bool TryParseFor(ExpressionNode*& expression);
+	bool TryParseUnarPrefix(ExpressionNode*& expression);
+	bool TryParseUnarPostfix(ExpressionNode*& expression);
+	bool TryParseIndentificator(ExpressionNode*& expression);
 	void Analyze();
 
 private:
@@ -70,6 +85,8 @@ private:
 	int require_lexem2(TokenType stream, TokenValue expected1, TokenValue expected2);
 	int require_lexem3(TokenType stream, TokenValue expected1, TokenValue expected2, TokenValue expected3);
 
+	void InitializeToString();
+
 	int _tokenPos = 0;
 	
 private:
@@ -78,5 +95,7 @@ private:
 	IndentificatorTable _idTable;
 	ExceptionManager* _errorManager;
 	vector<newPersistentTable<string>> _stringTables;
+
+	map<TokenValue, string> ToString;
 };
 

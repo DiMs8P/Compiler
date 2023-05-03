@@ -5,10 +5,10 @@
 class BinaryOperationNode : public ExpressionNode
 {
 public:
-    BinaryOperationNode(const Token& token, const ExpressionNode& left_node, const ExpressionNode& right_node);
+    BinaryOperationNode(const Token& token, ExpressionNode* left_node, ExpressionNode* right_node);
 
 private:
-    Token _token;
-    ExpressionNode _leftNode;
-    ExpressionNode _rightNode;
+    Token _operation;
+    ExpressionNode* _leftNode;
+    ExpressionNode* _rightNode;
 };
