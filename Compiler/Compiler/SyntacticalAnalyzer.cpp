@@ -54,7 +54,10 @@ ExpressionNode* SyntacticalAnalyzer::ParseVariableOrNumber()
     {
         if (Match(IDENTIFIER, {NOTINITIALIZED}) != -1)
         {
-            _errorManager->Exception("Using not initialized indentificator");
+            string message;
+            message += "Using not initialized indentificator: ";
+            message += _idTable.GetElemByLine(_tokenTable.GetElemByLine(_tokenPos - 1).LineNumber).name;
+            _errorManager->Exception(message);
         }
     }
 
@@ -254,7 +257,7 @@ bool SyntacticalAnalyzer::TryParseIndentificatorWithInitialization(ExpressionNod
     const int tokenPos = _tokenPos;
     if (Match(KEYWORD, {INT}) != -1)
     {
-        if (Match(IDENTIFIER, {INITIALIZED, NOTINITIALIZED}) != -1)
+        if (Match(IDENTIFIER, {NOTINITIALIZED}) != -1)
         {
             if (Match(ZNAK, {EQUAL}) != -1)
             {
@@ -265,6 +268,16 @@ bool SyntacticalAnalyzer::TryParseIndentificatorWithInitialization(ExpressionNod
                 ExpressionNode* rightFormulaNode = ParseFormula();
                 value1 = new BinaryOperationNode(Sign, variableNode, rightFormulaNode);
                 return true;
+            }
+        }
+        else
+        {
+            if (Match(IDENTIFIER, {INITIALIZED}) != -1)
+            {
+                string message;
+                message += "Trying to reinitialize indentificator: ";
+                message += _idTable.GetElemByLine(_tokenTable.GetElemByLine(_tokenPos - 1).LineNumber).name;
+                _errorManager->Exception(message);
             }
         }
     }
@@ -326,6 +339,16 @@ bool SyntacticalAnalyzer::TryParseIndentificator(ExpressionNode*& expression)
             ExpressionNode* rightFormulaNode = ParseFormula();
             expression = new BinaryOperationNode(Sign, variableNode, rightFormulaNode);
             return true;
+        }
+    }
+    else
+    {
+        if(Match(IDENTIFIER, {NOTINITIALIZED}) != -1)
+        {
+            string message;
+            message += "Trying to use not initialized indentificator: ";
+            message += _idTable.GetElemByLine(_tokenTable.GetElemByLine(_tokenPos - 1).LineNumber).name;
+            _errorManager->Exception(message);
         }
     }
     _tokenPos = tokenPos;
